@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import resume from "../assets/resume.pdf"; // ✅ no space
+import resume from "../assets/Resume.pdf"; // ✅ no space
 
 const SocialBar = () => {
   useEffect(() => {
