@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 // ✅ import images
 import website from "../assets/website.jpg";
 import ecommerce from "../assets/Ecommerce.jpg";
-import landing from "../assets/landing.jpg";
+import landing from "../assets/landing-design.jpg";
 import uiux from "../assets/webdesign.jpg";
 import webapp from "../assets/webapp.jpg";
 
