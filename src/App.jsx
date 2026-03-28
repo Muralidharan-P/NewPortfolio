@@ -11,6 +11,7 @@ import CTA from "./components/Cta";
 import Aboutme from "./components/Aboutme";
 import rocket from "./assets/newrocket1.png";
 import fire from "./assets/fire.gif";
+import Navbar from "./components/Navbar";
 
 function App(){
   useLenis();
@@ -25,6 +26,7 @@ return(
         </div>
 
       </div>
+      <Navbar />
   <Hero />
    <Aboutme />
       <About />
