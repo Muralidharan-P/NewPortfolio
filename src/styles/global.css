@@ -1434,6 +1434,9 @@ z-index: 10;
   transition: 0.4s;
   flex-direction: column;
 }
+.hamburger:hover {
+  transform: scale(1.2);
+}
 
 .hamburger span {
   display: block;
