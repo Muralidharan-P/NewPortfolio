@@ -7,12 +7,26 @@ import Services from "./components/Services";
 import SocialBar from "./components/SocialBar";
 import Cursor from "./components/Cursor";
 import useLenis from "./hooks/useLenis";
+import CTA from "./components/Cta";
+import Aboutme from "./components/Aboutme";
+import rocket from "./assets/newrocket1.png";
+import fire from "./assets/fire.gif";
 
 function App(){
   useLenis();
 return(
 <>
+
+      <div className="rocket-global">
+
+        <div className="rocket-wrapper">
+          <img src={rocket} className="rocket-img" alt="rocket" />
+          <img src={fire} className="rocket-fire" alt="fire" />
+        </div>
+
+      </div>
   <Hero />
+   <Aboutme />
       <About />
       <Works />
       <Skills />
@@ -20,6 +34,7 @@ return(
       <Services />
       <SocialBar />
       <Cursor />
+      <CTA />
 </>
 
 );

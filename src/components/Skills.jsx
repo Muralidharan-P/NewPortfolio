@@ -2,7 +2,6 @@ import { useEffect } from "react";
 import Matter from "matter-js";
 
 const Skills = () => {
-
   useEffect(() => {
     const section = document.querySelector(".skills-section");
     if (!section) return;
@@ -13,7 +12,8 @@ const Skills = () => {
       if (started) return; // ✅ run only once
       started = true;
 
-      const { Engine, Runner, Bodies, Composite, Mouse, MouseConstraint } = Matter;
+      const { Engine, Runner, Bodies, Composite, Mouse, MouseConstraint } =
+        Matter;
 
       const engine = Engine.create();
       const world = engine.world;
@@ -36,7 +36,7 @@ const Skills = () => {
           {
             restitution: 0.6,
             friction: 0.2,
-          }
+          },
         );
 
         bodies.push({ body, pill });
@@ -44,9 +44,15 @@ const Skills = () => {
       });
 
       // boundaries
-      const floor = Bodies.rectangle(width / 2, height + 40, width, 80, { isStatic: true });
-      const leftWall = Bodies.rectangle(-40, height / 2, 80, height, { isStatic: true });
-      const rightWall = Bodies.rectangle(width + 40, height / 2, 80, height, { isStatic: true });
+      const floor = Bodies.rectangle(width / 2, height + 40, width, 80, {
+        isStatic: true,
+      });
+      const leftWall = Bodies.rectangle(-40, height / 2, 80, height, {
+        isStatic: true,
+      });
+      const rightWall = Bodies.rectangle(width + 40, height / 2, 80, height, {
+        isStatic: true,
+      });
 
       Composite.add(world, [floor, leftWall, rightWall]);
 
@@ -90,13 +96,12 @@ const Skills = () => {
           }
         });
       },
-      { threshold: 0.3 }
+      { threshold: 0.3 },
     );
 
     observer.observe(section);
 
     return () => observer.disconnect();
-
   }, []);
 
   return (
@@ -108,13 +113,54 @@ const Skills = () => {
       </h2>
 
       <div className="skills-world">
+        {/* 🔥 SKILL PILLS */}
         {[
-          "Web Design","WordPress","Webflow","UI/UX","GSAP",
-          "JavaScript","React","Animation","SEO","E-commerce",
-          "Shopify","HTML","CSS","Bootstrap","Node.js",
-          "Git","GitHub","Frontend"
+          "Web Design",
+          "WordPress",
+          "Webflow",
+          "UI/UX",
+          "GSAP",
+          "JavaScript",
+          "React",
+          "Animation",
+          "SEO",
+          "E-commerce",
+          "Shopify",
+          "HTML",
+          "CSS",
+          "Bootstrap",
+          "Node.js",
+          "Git",
+          "GitHub",
+          "Perfomance",
+          "CMS",
+          "No Code",
+          "CRM",
+          "Frontend",
         ].map((skill, i) => (
-          <div key={i} className="skill-pill">{skill}</div>
+          <div key={"skill-" + i} className="skill-pill">
+            {skill}
+          </div>
+        ))}
+
+        {/* 🔥 EMOJI PILLS */}
+        {[
+          "🔥",
+          "🚀",
+          "🎯",
+          "👻",
+          "💻",
+          "⚡",
+          "🎨",
+          "🛒",
+          "✨",
+          "🧩",
+          "🌐",
+          "🎬",
+        ].map((emoji, i) => (
+          <div key={"emoji-" + i} className="skill-pill emoji-pill">
+            {emoji}
+          </div>
         ))}
       </div>
     </section>
