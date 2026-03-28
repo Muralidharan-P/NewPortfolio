@@ -62,7 +62,7 @@ const Works = () => {
   return (
     <section className="works-showcase">
       <div className="works-title-wrap">
-        <h2 className="works-title">My Top Work</h2>
+        <h2 className="works-title">My Top Works</h2>
       </div>
 
       <div className="works-gallery">
