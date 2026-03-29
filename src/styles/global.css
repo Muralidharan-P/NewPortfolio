@@ -1876,4 +1876,7 @@ body{
 .menu-item{
   font-size: 45px;
 }
+.about-section {
+  overflow: hidden;
+}
 }
