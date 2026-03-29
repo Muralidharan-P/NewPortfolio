@@ -1879,4 +1879,25 @@ body{
 .about-section {
   overflow: hidden;
 }
+.about-heading{
+  font-size: 12vw;
+}
+    .services-title {
+        font-size: 20px;
+        width: 60vw;
+        text-align: center;
+    }
+        .slide h3 {
+        font-size: 40px;
+        width: 90vw;
+        left: 0;
+        top: 20%;
+    }
+    .testi-arrow{
+      padding: 10px;
+    }
+    .cta-title{
+      font-size: 60px;
+    }
+
 }
