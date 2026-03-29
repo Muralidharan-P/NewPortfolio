@@ -315,7 +315,7 @@ border-radius:6px;
 
 }
 .hero-lottie {
-    height: 290px;
+    height: 267px;
 }
 .hero-lottie lottie-player {
 
@@ -1849,7 +1849,9 @@ width: 200px;
 .dot.active {
   background: #fff;
 }
-
+.hero-banner{
+  background-color: #000;
+}
 
 
 
@@ -1863,5 +1865,15 @@ width: 200px;
 }
 .testimonial-text{
   font-size: 20px;
+}
+body{
+  overflow: hidden;
+}
+.hamburger{
+  width: 50px;
+    height: 50px;
+}
+.menu-item{
+  font-size: 45px;
 }
 }
