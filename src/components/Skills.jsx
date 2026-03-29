@@ -84,6 +84,7 @@ section.addEventListener("touchend", () => {
   canDrag = false; // disable drag
 });
 
+ // drag
 const mouse = Mouse.create(section);
 
 const mouseConstraint = MouseConstraint.create(engine, {
@@ -94,14 +95,8 @@ const mouseConstraint = MouseConstraint.create(engine, {
   },
 });
 
-// 🔥 CONTROL DRAG VS SCROLL
-mouseConstraint.mouse.element.addEventListener("touchmove", () => {
-  if (!canDrag) {
-    mouseConstraint.constraint.bodyB = null; // disable drag
-  }
-});
-
 Composite.add(world, mouseConstraint);
+
     };
 
     // 🔥 INTERSECTION OBSERVER
