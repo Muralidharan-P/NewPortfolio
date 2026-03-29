@@ -9,6 +9,7 @@ const Skills = () => {
     let started = false;
 
     const startPhysics = () => {
+      const isMobile = window.innerWidth < 768; // ✅ ADD HERE
       if (started) return; // ✅ run only once
       started = true;
 
