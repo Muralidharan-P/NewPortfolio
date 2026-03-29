@@ -73,30 +73,21 @@ const Skills = () => {
       update();
 
 
-      section.addEventListener("touchstart", () => {
-  pressTimer = setTimeout(() => {
-    canDrag = true; // enable drag after hold
-  }, 200);
-});
+      
 
-section.addEventListener("touchend", () => {
-  clearTimeout(pressTimer);
-  canDrag = false; // disable drag
-});
+      if (!isMobile) {
+  const mouse = Mouse.create(section);
 
- // drag
-const mouse = Mouse.create(section);
+  const mouseConstraint = MouseConstraint.create(engine, {
+    mouse: mouse,
+    constraint: {
+      stiffness: 0.2,
+      render: { visible: false },
+    },
+  });
 
-const mouseConstraint = MouseConstraint.create(engine, {
-  mouse: mouse,
-  constraint: {
-    stiffness: 0.2,
-    render: { visible: false },
-  },
-});
-
-Composite.add(world, mouseConstraint);
-
+  Composite.add(world, mouseConstraint);
+}
     };
 
     // 🔥 INTERSECTION OBSERVER
