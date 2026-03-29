@@ -1866,8 +1866,10 @@ width: 200px;
 .testimonial-text{
   font-size: 20px;
 }
-body{
-  overflow-x: hidden;
+
+
+.modal-box{
+  width: 100%;
 }
 .hamburger{
   width: 50px;
