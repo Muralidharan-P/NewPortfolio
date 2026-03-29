@@ -72,18 +72,19 @@ const Skills = () => {
 
       update();
 
-      // drag
-      const mouse = Mouse.create(section);
+      if (!isMobile) {
+  const mouse = Mouse.create(section);
 
-      const mouseConstraint = MouseConstraint.create(engine, {
-        mouse: mouse,
-        constraint: {
-          stiffness: 0.2,
-          render: { visible: false },
-        },
-      });
+  const mouseConstraint = MouseConstraint.create(engine, {
+    mouse: mouse,
+    constraint: {
+      stiffness: 0.2,
+      render: { visible: false },
+    },
+  });
 
-      Composite.add(world, mouseConstraint);
+  Composite.add(world, mouseConstraint);
+}
     };
 
     // 🔥 INTERSECTION OBSERVER
