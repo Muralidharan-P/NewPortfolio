@@ -72,9 +72,6 @@ const Skills = () => {
 
       update();
 
-
-      
-
       if (!isMobile) {
   const mouse = Mouse.create(section);
 
