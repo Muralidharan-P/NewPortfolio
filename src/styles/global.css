@@ -1867,7 +1867,7 @@ width: 200px;
   font-size: 20px;
 }
 body{
-  overflow: hidden;
+  overflow-x: hidden;
 }
 .hamburger{
   width: 50px;
