@@ -1901,5 +1901,12 @@ width: 200px;
     .cta-title{
       font-size: 60px;
     }
+    .skills-section {
+    height: 600px;
+    padding-top: 50px;
+    }
+    .skill-pill{
+      font-size: 5vw;
+    }
 
 }
