@@ -367,7 +367,7 @@ transform:translate(-50%,-50%) scale(1);
 
 transition:transform .2s ease;
 
-z-index:9999;
+z-index:99999;
 
 }
 
@@ -1080,6 +1080,8 @@ opacity: 0.1;
   font-size: 80px;
   color: #000;
   margin-bottom: 20px;
+  position:relative;
+  z-index:11;
 }
 
 .cta-text {
@@ -1088,6 +1090,8 @@ opacity: 0.1;
   font-size: 18px;
   color: #222;
   line-height: 1.6;
+   position:relative;
+  z-index:11;
 }
 
 .cta-button {
@@ -1100,6 +1104,8 @@ opacity: 0.1;
   font-weight: 500;
   text-decoration: none;
   transition: 0.3s ease;
+   position:relative;
+  z-index:11;
 }
 
 .cta-button:hover {
@@ -1397,6 +1403,16 @@ z-index: 10;
   .rocket-fire {
     padding-bottom: 0;
 }
+.cta-button{
+  width: 100%;
+}
+.modal-box{
+  width: 100%;
+  margin: 0px 20px;
+}
+.modal-title{
+  font-size: 7vw !important;
+}
 }
 
 /* CURSOR FOLLOW */
@@ -1419,9 +1435,7 @@ z-index: 10;
 
 /* HAMBURGER */
 .hamburger {
-  position: fixed;
-  top: 30px;
-  right: 30px;
+  
   width: 80px;
   height: 80px;
   background: #0d141c;
@@ -1551,4 +1565,196 @@ z-index: 10;
 
 .menu-socials div:hover {
   transform: scale(1.2) rotate(10deg);
+}
+
+.social-sticky i, .menu-socials i{
+  color: #000;
+}
+
+/* CTA BUTTON */
+.cta-button {
+  position: relative;
+  width: 300px;
+  height: 80px;
+
+  margin: 30px auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.cta-button span {
+  transition: transform 0.2s ease;
+}
+
+/* MODAL */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index:1000;
+}
+
+.modal-box {
+  background: #fff;
+  padding: 30px;
+  width: 35vw;
+  border-radius: 12px;
+  position: relative;
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 15px;
+  border: 1px solid #000000;
+  border-radius: 6px;
+}
+
+.contact-form button {
+  background: black;
+  color: white;
+  padding: 12px;
+  border: none;
+}
+.contact-form button:hover{
+  background: #333;
+}
+.modal-title{
+  color: #000;
+  font-family: 'Anton', sans-serif;
+      margin-bottom: 20px;
+    font-size: 3vw;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+.success-msg {
+  margin-top: 15px;
+  color: #16a34a;
+  font-size: 14px;
+  text-align: center;
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.form-error {
+  color: #dc2626;
+  font-size: 13px;
+  margin-bottom: 5px;
+  text-align: left;
+  animation: fadeIn 0.3s ease;
+}
+
+.hire-btn {
+  
+
+  display: flex;
+  align-items: center;
+
+  background: linear-gradient(90deg, #000000, #4a5069);
+  border-radius: 50px;
+
+  padding: 20px;
+  cursor: pointer;
+
+  width: 200px;
+  overflow: hidden;
+  position: relative;
+  transition: all 1s ease;
+}
+
+/* TEXT */
+.hire-text {
+  color: white;
+  font-size: 20px;
+  margin-right: 50px; /* space for circle */
+  transition: transform 0.4s ease;
+}
+
+/* 🔥 CIRCLE */
+.hire-circle {
+  position: absolute;
+  right: 8px;
+
+  width: 42px;
+  height: 42px;
+
+  background: #ffffff;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: all 0.4s ease;
+}
+
+/* ARROW */
+.arrow {
+      color: #000000;
+    font-size: 30px;
+}
+
+/* 🔥 HOVER EFFECT */
+.hire-btn:hover .hire-circle {
+  transform: translateX(-140px); /* move left */
+}
+
+.hire-btn:hover .hire-text {
+  transform: translateX(60px); /* text moves right */
+}
+.menu-hamber{
+      display: flex;
+
+    justify-content: end;
+    gap: 20px;
+   align-items: center;
+}
+.hire-btn:hover{
+      background: linear-gradient(90deg, #4a5069, #000000);
+}
+
+.logo img{
+width: 200px;
+}
+.main-head{
+      display: flex;
+    width: 100%;
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    justify-content: space-between;
+    padding: 20px;
 }

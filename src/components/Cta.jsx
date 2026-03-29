@@ -1,15 +1,21 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+import ContactModal from "./ContactModal";
 
 const CTA = () => {
   const btnRef = useRef(null);
   const textRef = useRef(null);
+  const [success, setSuccess] = useState(false);
 
+  const [open, setOpen] = useState(false);
+
+  // 🔥 cursor follow effect
   useEffect(() => {
     const btn = btnRef.current;
     const text = textRef.current;
 
     const handleMove = (e) => {
       const rect = btn.getBoundingClientRect();
+
       const x = e.clientX - rect.left - rect.width / 2;
       const y = e.clientY - rect.top - rect.height / 2;
 
@@ -32,16 +38,33 @@ const CTA = () => {
   return (
     <section className="cta-section">
 
-      <h2 className="cta-title">Lets work together</h2>
+      <h2 className="cta-title">Let’s Work Together</h2>
 
       <p className="cta-text">
-        I build fast, modern, and high-impact websites that help businesses grow. 
-        Let’s create something powerful together.
+        I build modern, fast, and engaging websites that help your business grow.
       </p>
 
-      <div ref={btnRef} className="cta-button">
+      {/* 🔥 YOUR BUTTON */}
+      <div
+        ref={btnRef}
+        className="cta-button"
+        onClick={() => setOpen(true)}
+      >
         <span ref={textRef}>Get in touch •</span>
       </div>
+      {success && (
+  <p className="success-msg">
+    ✅ Message sent successfully! I’ll contact you soon.
+  </p>
+)}
+
+      {/* 🔥 POPUP */}
+      {open && (
+  <ContactModal
+    close={() => setOpen(false)}
+    onSuccess={() => setSuccess(true)}
+  />
+)}
 
     </section>
   );

@@ -34,9 +34,10 @@ const SocialBar = () => {
         <i className="fa-brands fa-whatsapp"></i>
       </a>
 
-      <a href="tel:+917695973188" className="social-icon call">
-        <i className="fa-solid fa-phone"></i>
-      </a>
+      {/* ✅ EMAIL ICON */}
+  <a href="mailto:muralidesigns7@gmail.com" className="social-icon">
+    <i className="fa-solid fa-envelope"></i>
+  </a>
 
       <a href="https://www.linkedin.com/" target="_blank" className="social-icon linkedin">
         <i className="fa-brands fa-linkedin"></i>
