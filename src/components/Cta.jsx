@@ -36,7 +36,7 @@ const CTA = () => {
   }, []);
 
   return (
-    <section className="cta-section">
+    <section className="cta-section" id="contact">
 
       <h2 className="cta-title">Let’s Work Together</h2>
 

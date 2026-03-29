@@ -60,7 +60,7 @@ const Works = () => {
   ];
 
   return (
-    <section className="works-showcase">
+    <section className="works-showcase" id="works">
       <div className="works-title-wrap">
         <h2 className="works-title">My Top Works</h2>
       </div>

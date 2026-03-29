@@ -105,7 +105,7 @@ const Skills = () => {
   }, []);
 
   return (
-    <section className="skills-section">
+    <section className="skills-section" id="skills">
       <h2 className="about-heading">
         <div className="about-line">
           <span>My Techstack</span>

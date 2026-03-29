@@ -12,6 +12,7 @@ import Aboutme from "./components/Aboutme";
 import rocket from "./assets/newrocket1.png";
 import fire from "./assets/fire.gif";
 import Navbar from "./components/Navbar";
+import Testimonial from "./components/Testimonial";
 
 function App(){
   useLenis();
@@ -36,6 +37,7 @@ return(
       <Services />
       <SocialBar />
       <Cursor />
+      <Testimonial />
       <CTA />
 </>
 

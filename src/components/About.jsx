@@ -78,15 +78,15 @@ const About = () => {
 }, []);
 
   return (
-    <section className="about-intro">
+    <section className="about-intro" id="about-intro">
       <div className="about-floating-images"></div>
 
       <div className="about-wrapper">
-        <h2 className="about-heading">
+        <h1 className="about-heading">
           <div className="about-line"><span>I BUILD MODERN</span></div>
           <div className="about-line"><span>WEB EXPERIENCES</span></div>
           <div className="about-line"><span>THAT STAND OUT</span></div>
-        </h2>
+        </h1>
 
         <p className="about-subtext">
           I create fast, modern, and visually engaging websites...

@@ -32,7 +32,7 @@ const About = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="about-section">
+    <section ref={sectionRef} className="about-section" id="aboutme">
 
       {/* 🔥 HAND IMAGE */}
       <img
@@ -47,28 +47,27 @@ const About = () => {
 
       {/* 🔥 TEXT CONTENT */}
       <div className="about-line">
-        <p className="about-text">
-          Hi, I’m Murali — a creative Web developer from Tirupattur who loves turning ideas into interactive experiences.
-        </p>
-      </div>
+  <p className="about-text">
+    Hi, I’m Murali — a creative frontend developer from Tirupattur who turns ideas into modern, interactive web experiences.    With a background in Computer Science and a passion for cricket 🏏, I bring the same focus, precision, and creativity into every project — especially in animations and user experience.
 
-      <div className="about-line">
-        <p className="about-text">
-          With a background in Computer Science and a passion for cricket 🏏, I bring the same focus, timing, and creativity into my work — especially when it comes to animations and user experience.
-        </p>
-      </div>
+  </p>
+</div>
 
-      <div className="about-line">
-        <p className="about-text">
-          I enjoy experimenting with motion, crafting smooth interactions, and building websites that feel modern, fast, and engaging.
-        </p>
-      </div>
+{/* <div className="about-line">
+  <p className="about-text">
+    With a background in Computer Science and a passion for cricket 🏏, I bring the same focus, precision, and creativity into every project — especially in animations and user experience.
+    
+  </p>
+</div> */}
 
-      <div className="about-line">
-        <p className="about-text">
-          I don’t just build websites — I build experiences that feel alive.
-        </p>
-      </div>
+<div className="about-line">
+  <p className="about-text">
+    I specialize in building fast, visually engaging websites with smooth interactions that not only look great but also perform well.    I don’t just build websites — I craft digital experiences that connect, engage, and leave a lasting impression.
+
+  </p>
+</div>
+
+
 
     </section>
   );

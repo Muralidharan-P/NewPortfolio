@@ -20,25 +20,27 @@ const Navbar = () => {
 
   return (
     <>
-    <header className="main-head">
-      <a className="logo" href="/"><img src={logo} alt="Logo" /></a>
-      {/* HAMBURGER */}
-      <div className="menu-hamber">
-        {/* 🔥 HIRE ME BUTTON */}
-        <div className="hire-btn" onClick={() => setModalOpen(true)}>
-  <span className="hire-text">Hire Me</span>
-  <span className="hire-circle">
-    <span className="arrow">↗</span>
-  </span>
-</div>
-        <div
-          className={`hamburger ${menuOpen ? "hide" : ""}`}
-          onClick={() => setMenuOpen(true)}
-        >
-          <span></span>
-          <span></span>
+      <header className="main-head">
+        <a className="logo" href="/">
+          <img src={logo} alt="Logo" />
+        </a>
+        {/* HAMBURGER */}
+        <div className="menu-hamber">
+          {/* 🔥 HIRE ME BUTTON */}
+          <div className="hire-btn" onClick={() => setModalOpen(true)}>
+            <span className="hire-text">Hire Me</span>
+            <span className="hire-circle">
+              <span className="arrow">↗</span>
+            </span>
+          </div>
+          <div
+            className={`hamburger ${menuOpen ? "hide" : ""}`}
+            onClick={() => setMenuOpen(true)}
+          >
+            <span></span>
+            <span></span>
+          </div>
         </div>
-      </div>
       </header>
 
       {/* MENU */}
@@ -49,16 +51,52 @@ const Navbar = () => {
         </div>
 
         <div className="menu-content">
-          <a href="#home" className="menu-item active">
-            HOME
-          </a>
-          <a href="#work" className="menu-item">
-            WORK
-          </a>
-          <a href="#about" className="menu-item">
+          
+          <a
+            href="#aboutme"
+            className="menu-item"
+            onClick={() => setMenuOpen(false)}
+          >
             ABOUT
           </a>
-          <a href="#contact" className="menu-item">
+
+
+          <a
+            href="#works"
+            className="menu-item"
+            onClick={() => setMenuOpen(false)}
+          >
+            WORK
+          </a>
+          <a
+            href="#skills"
+            className="menu-item "
+            onClick={() => setMenuOpen(false)}
+          >
+            Skills
+          </a>
+                    <a
+            href="#experience"
+            className="menu-item"
+            onClick={() => setMenuOpen(false)}
+          >
+            Experiences
+          </a>
+          <a
+            href="#services"
+            className="menu-item "
+            onClick={() => setMenuOpen(false)}
+          >
+            Services
+          </a>
+
+          
+
+          <a
+            href="#contact"
+            className="menu-item"
+            onClick={() => setMenuOpen(false)}
+          >
             CONTACT
           </a>
 
