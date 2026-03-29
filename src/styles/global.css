@@ -537,7 +537,7 @@ height: 100vh;
 }
 .work-item {
     
-    width: 20vw;
+    width: 35vw;
     height: 25vh;
 }
 
@@ -1909,6 +1909,32 @@ width: 200px;
     }
     .skill-pill{
       font-size: 5vw;
+    }
+
+    .img1{
+      top: -2%;
+    }
+    .img2{
+      top: 0%;
+    }
+    .img4 {
+    top: 32%;
+    left: 0%;
+    }
+    .img7 {
+    top: 29%;
+    right: -3%;
+    }
+    .img3 {
+    top: 56%;
+    left: 1%;
+    }
+    .img5 {
+    top: 70%;
+    }
+    .img9 {
+    bottom: -14%;
+    right: 27%;
     }
 
 }
