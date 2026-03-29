@@ -1853,7 +1853,9 @@ width: 200px;
   background-color: #000;
 }
 
-
+.skills-section {
+  touch-action: pan-y;
+}
 
 
 @media (max-width: 768px) {
@@ -1902,7 +1904,7 @@ width: 200px;
       font-size: 60px;
     }
     .skills-section {
-    height: 600px;
+    height: 700px;
     padding-top: 50px;
     }
     .skill-pill{

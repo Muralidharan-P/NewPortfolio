@@ -72,19 +72,36 @@ const Skills = () => {
 
       update();
 
-      if (!isMobile) {
-  const mouse = Mouse.create(section);
 
-  const mouseConstraint = MouseConstraint.create(engine, {
-    mouse: mouse,
-    constraint: {
-      stiffness: 0.2,
-      render: { visible: false },
-    },
-  });
+      section.addEventListener("touchstart", () => {
+  pressTimer = setTimeout(() => {
+    canDrag = true; // enable drag after hold
+  }, 200);
+});
 
-  Composite.add(world, mouseConstraint);
-}
+section.addEventListener("touchend", () => {
+  clearTimeout(pressTimer);
+  canDrag = false; // disable drag
+});
+
+const mouse = Mouse.create(section);
+
+const mouseConstraint = MouseConstraint.create(engine, {
+  mouse: mouse,
+  constraint: {
+    stiffness: 0.2,
+    render: { visible: false },
+  },
+});
+
+// 🔥 CONTROL DRAG VS SCROLL
+mouseConstraint.mouse.element.addEventListener("touchmove", () => {
+  if (!canDrag) {
+    mouseConstraint.constraint.bodyB = null; // disable drag
+  }
+});
+
+Composite.add(world, mouseConstraint);
     };
 
     // 🔥 INTERSECTION OBSERVER
