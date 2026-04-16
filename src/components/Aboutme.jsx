@@ -48,7 +48,7 @@ const About = () => {
       {/* 🔥 TEXT CONTENT */}
       <div className="about-line">
   <p className="about-text">
-    Hi, I’m Murali — a creative frontend developer from Tirupattur who turns ideas into modern, interactive web experiences.    With a background in Computer Science and a passion for cricket 🏏, I bring the same focus, precision, and creativity into every project — especially in animations and user experience.
+    Hi, I’m Murali — a creative Web developer from Tirupattur who turns ideas into modern, interactive web experiences.    With a background in Computer Science and a passion for cricket , I bring the same focus, precision, and creativity into every project — especially in animations and user experience.
 
   </p>
 </div>
